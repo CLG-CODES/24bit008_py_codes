@@ -82,7 +82,7 @@ print("Area is:",s*s,"Perimeter is:",4*s);
 # CODE18: Calculate area & perimeter of a rectangle. A = L*B, P = 2 (L+B)
 len=float(input("Pls give the length:"));
 bre=float(input("Pls give the bre:"));
-print("The Area is:",len*bre,"Peri is:",2(len*bre));
+print("The Area is:",len*bre,"Peri is:",2*(len*bre));
 # CODE19: Calculate area of a circle. A = 22/7 * R * R
 r=float(input("Pls give the radius:"));
 print("Area is:",r*r*(22/7));
