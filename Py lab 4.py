@@ -1,9 +1,15 @@
 #CODE1: Print all aplhabets in upper and in lower case
+for i in range(65,91):
+    print(chr(i));
+for i in range(97,123):
+    print(chr(i));
+
 #CODE2: Print a multiplication of a given number
 num=int(input("Pls give the number:"));
 i=1
 for i in range (1,13):
     print(num,"times",i,"is",num*i);
+    
 #CODE3: Count no of alphabet and no of digits in any given in a string
 str=input("Pls give the string:");
 alphacount=0
@@ -16,7 +22,58 @@ for i in range(0,len(str)):
         
 print(alphacount);
 print(intcount);
+#CODE 4:Check if a number is prime,perfect,armstrong palindome and automorphic
+inp=int(input("Pls give the number:"));
+def prime(inp):
+    for i in range(2,inp):
+        if inp%i==0:
+            print("Not prime!");
+            break;
+        elif i==inp-1:
+            print("Prime!");
+def perfect(inp):
+    sum=0;
+    for i in range(1,inp):
+        if inp%i==0:
+            sum+=i;
+    if sum==inp:
+        print("Perfect!");
+    else:
+        print("Not perfect!");
+def armstrong(inp):
+    sum=0;
+    lenn=len(str(inp));
+    num=inp;
+    while inp>=1:
+            rem=inp%10;
+            rem=rem**lenn;
+            sum=sum+rem;
+            inp=inp//10;
+    if sum==num:
+        print("Is an Armstrong!");
+    else:
+        print("Isnt an Armstrong!");
+def palindrome(inp):
+    inp=str(inp);
+    inp_rev=inp[::-1];
+    if inp_rev==inp:
+        print("Is a Palindrome!");
+    else:
+        print("Is not a palindrome!");
+def automorphic(inp):
+    inp_sq=inp**2;
+    inp=str(inp);inp_sq=str(inp_sq);
+    if inp in inp_sq:
+        print("Is Automorphic");
+    else:
+        print("Is not an automorphic!");
+prime(inp);
+perfect(inp);
+armstrong(inp);
+palindrome(inp);
+automorphic(inp);
 
+#CODE5: Generate all pythogoras triplets with length less than 30
 #CODE7: Print N C R , N P R
 n=int(input("pls give N:"));
 r=int(input("pls give R:"));
