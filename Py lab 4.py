@@ -74,6 +74,15 @@ palindrome(inp);
 automorphic(inp);
 
 #CODE5: Generate all pythogoras triplets with length less than 30
+l=[]
+for i in range(1,31):
+    for j in range(1,31):
+        k=(j**2+i**2)**0.5;
+        if k.is_integer():
+            l.append((i,j,int(k)));
+print("in the format of (X,Y,Z) coordinates:",l)
+
+
 #CODE7: Print N C R , N P R
 n=int(input("pls give N:"));
 r=int(input("pls give R:"));
@@ -92,3 +101,19 @@ fact=1;
 for i in range(1,num+1):
     fact=fact*i
 print(fact);
+
+#CODE9: Print N natural numbers in reverse order
+num=int(input("input:"));
+for i in range(0,num):
+    print(num-i);
+
+#CODE 10: Generate N numbers of the fibonnaci series
+num=int(input("input:"));
+int1=1
+int2=1
+l=[];k=0;
+for i in range(1,num+1):
+    print(int1,end=" ");
+    int1,int2=int2,int1+int2;
+
+
