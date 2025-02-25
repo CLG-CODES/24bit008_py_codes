@@ -116,4 +116,24 @@ for i in range(1,num+1):
     print(int1,end=" ");
     int1,int2=int2,int1+int2;
 
+#CODE 11: Find the value of sin(x), x in radians
+ang=int(input("Give the angle in radians:"));
+def sin(ang):
+    def factorial(x):
+        fact=1;
+        for i in range(1,x+1):
+            fact*=i;
+        return fact;
+    term=0;sum=0;alt=0;
+    for i in range(1,100,2):
+        print(i)
+        product=(-1)**alt;
+        alt+=1;
+        term_numerator=product*(ang**i);
+        term=term_numerator/factorial(i);
+        sum+=term;
+    print(sum);
+    return sum;
+sin(ang);
+
 
