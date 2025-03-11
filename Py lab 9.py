@@ -55,7 +55,15 @@ print(lister(n));
 s=input();
 def ispalindrome(s):
     s=s.lower()
-    
+    l=list(s);
+    s=""
+    for i in l:
+        if i!=" ":
+            s+=i;
+    if s==s[::-1]:
+        return True;
+    return False;    
+print(ispalindrome(s))
     
 
 
