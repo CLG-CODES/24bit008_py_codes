@@ -45,7 +45,59 @@ celsius = [(f - 32) * 5/9 for f in fahrenheit];
 print(celsius);
 
 #CODE 7: Stack
+print("Welcome to the Stack!");l=[];
+def choice():
+    print("="*50);print("What would you like to do?");
+    print("press 1 for making a stack");print("press 2 for adding a new element");
+    print("press 3 for popping an element");print("press 4 for clearing the stack");
+    print("press 5 for printing the stack");return int(input("Type here:"));
+while True:
+    decision=choice()
+    if decision==1:
+        for _ in range(int(input("How many numbers do u want to have in the stack?"))):
+            l.append(input("Please give the value:"));      
+    elif decision==2:l.append(input("Please give the value!")) 
+    elif decision==3:l.remove(l[-1]);
+    elif decision==4:del l;l=[];
+    elif decision==5:
+        for i in l: print(i);
+    else:
+        print("Give input in the valid range only.")
+    print("Do you want to do anything else?");
+    print("Press 1 for yes 0 for no");
+    inp=int(input("Pls type here:"));
+    if inp==1: continue;
+    else: break;
+
 #CODE 8: Queue
+print("Welcome to the Queue!");
+q = [];
+def choice():
+    print("="*50);print("What would you like to do?");
+    print("Press 1 to create a queue");print("Press 2 to add a new element");
+    print("Press 3 to remove an element");print("Press 4 to clear the queue");
+    print("Press 5 to print the queue");return int(input("Type here: "));
+while True:
+    decision = choice();
+    if decision == 1:
+        for _ in range(int(input("How many numbers do you want to have in the queue?"))):
+            q.append(input("Please give the value:"));      
+    elif decision == 2:
+        q.append(input("Please give the value!"));
+    elif decision == 3: q.pop(0);
+    elif decision == 4:del q;q = [];
+    elif decision == 5:
+        for i in q:print(i);
+    else:
+        print("Give input in the valid range only.");
+    print("Do you want to do anything else?");
+    print("Press 1 for yes, 0 for no");
+    inp = int(input("Pls type here: "));
+    if inp == 1:
+        continue;
+    else:
+        break;
+
 
 #CODE 9:take two lists of nums, make a third list such that it has elements which are in the first list but not in the second(use list comprehension)
 l1=[1,2,3,4];
